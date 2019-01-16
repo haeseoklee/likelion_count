@@ -1,0 +1,24 @@
+{% extends 'wordcount/base.html' %}
+{% block content %}
+<div class="ui text container" style="text-align:center;margin-top: 100px;">
+    <h1>만든 사람</h1>
+    <div class="ui centered card">
+        <a class="image" href="https://www.facebook.com/likelion.hyuerica/">
+            <img src="{{STATIC_URL}}wordcount\likelion_erica.jpg">
+        </a>
+        <div class="content">
+            <a class="header" href="https://www.facebook.com/haeseoklee.dev">이해석</a>
+            <div class="meta">
+                <span class="date">Haeseok Lee</span>
+            </div>
+            <div class="description">
+                한양대학교 ERICA <br> 소프트웨어융합대학 <br> 소프트웨어학부 컴퓨터전공 <br>
+                & 멋쟁이사자처럼 7기 운영진
+            </div>
+        </div>
+    </div>
+    
+
+    <a href="{% url 'home' %}"><i class="massive home icon"></i></a>
+{% endblock content %}
+</div>

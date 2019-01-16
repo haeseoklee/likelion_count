@@ -1,0 +1,32 @@
+{% extends 'wordcount/base.html' %}
+{% block content %}
+<div class="ui text container" style="text-align:center;margin-top: 100px;">
+    
+    {% if not total%}
+
+    <div class="ui negative message">
+        <h1>아무것도 입력하지 않으셨네요</h1>
+    </div>
+
+    {% else %}
+
+    <div class="ui success message">
+        <h1>입력한 문장은 {{ total }} 단어로 구성되어 있습니다</h1>
+    </div>
+    <h1>입력한 텍스트</h1>
+    <div class="ui compact message">
+        {{ full_text }}
+    </div>
+    <h1>단어 카운트</h1>
+    <div class="ui compact message">
+        {% for word, countTotal in dictionary %}
+        {{ word }} : {{ countTotal }}
+        <br>
+        {% endfor %}
+    </div>
+    <br>
+    
+    {% endif %}
+    <a href="{% url 'home' %}"><i class="massive home icon"></i></a>
+</div>
+{% endblock content %}
